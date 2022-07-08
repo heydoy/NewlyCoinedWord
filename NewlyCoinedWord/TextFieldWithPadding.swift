@@ -17,10 +17,6 @@ class TextFieldWithPadding: UITextField {
         right: 18
     )
     
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
-    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds)
         return bounds.inset(by: textFieldPadding)
