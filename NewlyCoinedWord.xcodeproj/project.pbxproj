@@ -13,6 +13,7 @@
 		A22C986728782EC3004C916A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22C986528782EC3004C916A /* Main.storyboard */; };
 		A22C986928782EC5004C916A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22C986828782EC5004C916A /* Assets.xcassets */; };
 		A22C986C28782EC5004C916A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22C986A28782EC5004C916A /* LaunchScreen.storyboard */; };
+		A22C98742878F3A7004C916A /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22C98732878F3A7004C916A /* TextFieldWithPadding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A22C986828782EC5004C916A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22C986B28782EC5004C916A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22C986D28782EC5004C916A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A22C98732878F3A7004C916A /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A22C985F28782EC3004C916A /* AppDelegate.swift */,
 				A22C986128782EC3004C916A /* SceneDelegate.swift */,
 				A22C986328782EC3004C916A /* SearchViewController.swift */,
+				A22C98732878F3A7004C916A /* TextFieldWithPadding.swift */,
 				A22C986528782EC3004C916A /* Main.storyboard */,
 				A22C986828782EC5004C916A /* Assets.xcassets */,
 				A22C986A28782EC5004C916A /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22C986428782EC3004C916A /* SearchViewController.swift in Sources */,
+				A22C98742878F3A7004C916A /* TextFieldWithPadding.swift in Sources */,
 				A22C986028782EC3004C916A /* AppDelegate.swift in Sources */,
 				A22C986228782EC3004C916A /* SceneDelegate.swift in Sources */,
 			);
