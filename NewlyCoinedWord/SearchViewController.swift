@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    // properties
     var words: [String: String] = [
         "스불재" : "스스로 불러온 재앙",
         "삼귀다" : "아직 사귀는 사이가 아닌 썸타는 단계",
@@ -21,10 +22,29 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
+    
+    // properties-hashtags
+    
+    @IBOutlet weak var firstHashtagButton: UIButton!
+    @IBOutlet weak var secondHashtagButton: UIButton!
+    @IBOutlet weak var thirdHashtagButton: UIButton!
+    @IBOutlet weak var fourthHashtagButton: UIButton!
+    
+    
+    
+    
+    var hashtags: [UIButton] {
+        [firstHashtagButton, secondHashtagButton, thirdHashtagButton, fourthHashtagButton]
+    }
+    
+    // lifecicyle
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTextField.delegate = self
         query = searchTextField.text ?? ""
+        designHashtag(for: hashtags)
+        
+        resultLabel.text = .none
         
     }
     
@@ -42,7 +62,7 @@ class SearchViewController: UIViewController {
     @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-    
+     
     @IBAction func didHashTagTapped(_ sender: UIButton) {
         if let hashtag = sender.currentTitle {
             setResultLabel(hashtag)
@@ -57,12 +77,16 @@ class SearchViewController: UIViewController {
         config.background.backgroundColor = .white
         config.background.strokeWidth = 2.0
         config.background.strokeColor = .black
+        config.background.backgroundColor = .white
         config.cornerStyle = .capsule
         
         buttons.forEach {
+            print($0.currentTitle)
             // $0.clipsToBounds = true
             $0.setTitleColor(.black, for: .normal)
             $0.configuration = config
+            $0.setTitle(words.keys.randomElement(), for: .normal)
+            
         }
     }
     

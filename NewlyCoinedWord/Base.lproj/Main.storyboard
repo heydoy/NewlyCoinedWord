@@ -120,8 +120,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstHashtagButton" destination="hxz-ui-4Be" id="vPd-ez-Lmt"/>
+                        <outlet property="fourthHashtagButton" destination="kGP-eo-15a" id="1c0-IV-pqw"/>
                         <outlet property="resultLabel" destination="cSG-bl-Bei" id="bjy-zI-7I6"/>
                         <outlet property="searchTextField" destination="Exo-ct-yTD" id="2lN-cO-dWw"/>
+                        <outlet property="secondHashtagButton" destination="K7a-Ig-vsQ" id="U8F-wa-XcI"/>
+                        <outlet property="thirdHashtagButton" destination="dh2-o2-8Cl" id="xhF-gM-fLH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
