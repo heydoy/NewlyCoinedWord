@@ -47,7 +47,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-Ig-vsQ">
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-Ig-vsQ">
                                 <rect key="frame" x="99" y="131" width="48.5" height="31"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -58,7 +58,7 @@
                                     <action selector="didHashTagTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NT2-4p-mxc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-ui-4Be">
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-ui-4Be">
                                 <rect key="frame" x="30" y="131" width="61" height="31"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -69,7 +69,7 @@
                                     <action selector="didHashTagTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Hs-HP-6Rh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-eo-15a">
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-eo-15a">
                                 <rect key="frame" x="236" y="131" width="48.5" height="31"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -80,11 +80,14 @@
                                     <action selector="didHashTagTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fki-Wb-JwS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dh2-o2-8Cl">
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dh2-o2-8Cl">
                                 <rect key="frame" x="155.5" y="131" width="72.5" height="31"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="만만잘부" cornerStyle="large">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="만만잘부">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="만만잘부">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -98,7 +101,9 @@
                             <constraint firstItem="4su-Vh-SmK" firstAttribute="top" secondItem="Exo-ct-yTD" secondAttribute="top" id="3Ky-jO-91l"/>
                             <constraint firstItem="4su-Vh-SmK" firstAttribute="height" secondItem="Exo-ct-yTD" secondAttribute="height" id="AG0-Jl-wqh"/>
                             <constraint firstItem="cSG-bl-Bei" firstAttribute="centerX" secondItem="U8S-ge-h6L" secondAttribute="centerX" id="ArU-jL-RS2"/>
+                            <constraint firstItem="kGP-eo-15a" firstAttribute="bottom" secondItem="hxz-ui-4Be" secondAttribute="bottom" id="DoI-8j-kad"/>
                             <constraint firstItem="cSG-bl-Bei" firstAttribute="width" secondItem="U8S-ge-h6L" secondAttribute="width" multiplier="0.679144" id="FFE-ZB-Jo8"/>
+                            <constraint firstItem="K7a-Ig-vsQ" firstAttribute="bottom" secondItem="hxz-ui-4Be" secondAttribute="bottom" id="IMB-xS-Zlg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4su-Vh-SmK" secondAttribute="trailing" constant="28" id="P0h-sO-igT"/>
                             <constraint firstItem="cSG-bl-Bei" firstAttribute="centerY" secondItem="U8S-ge-h6L" secondAttribute="centerY" id="RJW-TK-7rJ"/>
                             <constraint firstItem="hxz-ui-4Be" firstAttribute="leading" secondItem="Exo-ct-yTD" secondAttribute="leading" id="RyN-mt-diy"/>
@@ -113,9 +118,11 @@
                             <constraint firstItem="cSG-bl-Bei" firstAttribute="height" secondItem="U8S-ge-h6L" secondAttribute="height" multiplier="0.39819" id="cvm-az-vFS"/>
                             <constraint firstItem="U8S-ge-h6L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dc9-xB-RhA"/>
                             <constraint firstItem="Exo-ct-yTD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ijo-ND-xnx"/>
+                            <constraint firstItem="dh2-o2-8Cl" firstAttribute="bottom" secondItem="hxz-ui-4Be" secondAttribute="bottom" id="jC3-VB-52l"/>
                             <constraint firstItem="K7a-Ig-vsQ" firstAttribute="centerY" secondItem="hxz-ui-4Be" secondAttribute="centerY" id="lvu-sJ-1zt"/>
                             <constraint firstItem="dh2-o2-8Cl" firstAttribute="top" secondItem="K7a-Ig-vsQ" secondAttribute="top" id="tKX-IK-cKw"/>
                             <constraint firstItem="dh2-o2-8Cl" firstAttribute="leading" secondItem="K7a-Ig-vsQ" secondAttribute="trailing" constant="8" symbolic="YES" id="tYG-Rt-tYJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kGP-eo-15a" secondAttribute="trailing" constant="20" id="vfS-fa-Y0f"/>
                             <constraint firstItem="hxz-ui-4Be" firstAttribute="top" secondItem="Exo-ct-yTD" secondAttribute="bottom" constant="17" id="xxg-2j-Ph4"/>
                         </constraints>
                     </view>

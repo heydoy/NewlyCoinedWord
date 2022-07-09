@@ -51,7 +51,17 @@ class SearchViewController: UIViewController {
         resultLabel.text = .none
         designHashtag(for: hashtags)
         
-        setTextfieldPadding(searchTextField)
+        // text test
+//        thirdHashtagButton.setTitle("fefefefefefefefㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇefefefㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇefe", for: .normal)
+//        fourthHashtagButton.setContentHuggingPriority(UILayoutPriority(rawValue: 330), for: .vertical)
+
+//
+//        thirdHashtagButton.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
+//
+//        fourthHashtagButton.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
+
+
+    
         
                 
     }
@@ -96,6 +106,7 @@ class SearchViewController: UIViewController {
             $0.setTitleColor(.black, for: .normal)
             $0.configuration = config
             $0.setTitle(words.keys.randomElement(), for: .normal)
+
             
             // 단어가 안 겹치게 랜덤으로 픽할 순 없을까
         }
@@ -111,17 +122,7 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func setTextfieldPadding(_ tf: UITextField) {
-        let textFieldPadding = UIEdgeInsets(
-            top: 0,
-            left: 18,
-            bottom: 0,
-            right: 18
-        )
-        tf.textRect(forBounds: tf.bounds).inset(by: textFieldPadding)
-        tf.placeholderRect(forBounds: tf.bounds).inset(by: textFieldPadding)
-        tf.editingRect(forBounds: tf.bounds).inset(by: textFieldPadding)
-    }
+
 
 }
 
