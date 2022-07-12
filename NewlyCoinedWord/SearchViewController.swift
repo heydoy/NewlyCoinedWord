@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class SearchViewController: UIViewController {
     
     //MARK: -  properties
@@ -51,15 +53,6 @@ class SearchViewController: UIViewController {
         resultLabel.text = .none
         designHashtag(for: hashtags)
         
-        // text test
-//        thirdHashtagButton.setTitle("fefefefefefefefㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇefefefㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇefe", for: .normal)
-//        fourthHashtagButton.setContentHuggingPriority(UILayoutPriority(rawValue: 330), for: .vertical)
-
-//
-//        thirdHashtagButton.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
-//
-//        fourthHashtagButton.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
-
 
     
         
@@ -76,7 +69,8 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func didSearchButtonTapped(_ sender: UIButton) {
-        setResultLabel(query)
+        let text = setResultLabel(query)
+        resultLabel.text = text
     }
     
     @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
@@ -84,11 +78,14 @@ class SearchViewController: UIViewController {
     }
      
     @IBAction func didHashTagTapped(_ sender: UIButton) {
+        var text = ""
         if let hashtag = sender.currentTitle{
-            setResultLabel(hashtag)
+            text = setResultLabel(hashtag)
         } else {
-            setResultLabel("")
+            text = setResultLabel("")
         }
+        resultLabel.text = text
+
         
     }
     
@@ -114,11 +111,14 @@ class SearchViewController: UIViewController {
         
     }
     
-    func setResultLabel(_ query: String) {
+    func setResultLabel(_ query: String) -> String{
+        
         if let result = words[query] {
-            resultLabel.text = result
+            // resultLabel.text = result
+            return result
         } else {
-            resultLabel.text = "검색결과가 없습니다."
+            // resultLabel.text = "검색결과가 없습니다."
+            return "검색결과가 없습니다."
         }
     }
     
@@ -132,10 +132,17 @@ extension SearchViewController: UITextFieldDelegate {
         self.view.endEditing(true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        setResultLabel(query)
+        let text = setResultLabel(query)
+        resultLabel.text = text
         textField.resignFirstResponder() // TextField 비활성화
         
         return true
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+
 }
 
