@@ -7,6 +7,16 @@
 
 import UIKit
 
+enum NewWords: String, CaseIterable {
+    case 스불재 = "스스로 불러온 재앙"
+    case 삼귀다 = "아직 사귀는 사이가 아닌 썸타는 단계"
+    case 꾸안꾸 = "꾸민듯 안 꾸민듯"
+    case 윰차 = "유무차별"
+    case 저메추 = "저녁메뉴추천"
+    case 슬세권 = "슬리퍼처럼 편한 복장으로 다닐 수 있는 범위의 생활권역"
+    case 미닝아웃 = "Meaning+Coming Out의 합성어, 비활동에 자신의 취향과 신념을 적극적으로 표현하는 소비 습관"
+    case 털개버세 = "털리면 개미, 버티면 세력"
+}
 
 
 class SearchViewController: UIViewController {
@@ -69,7 +79,8 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func didSearchButtonTapped(_ sender: UIButton) {
-        let text = setResultLabel(query)
+        // let text = setResultLabel(query)
+        let text = searchResultUsingEnum(query)
         resultLabel.text = text
     }
     
@@ -120,6 +131,18 @@ class SearchViewController: UIViewController {
             // resultLabel.text = "검색결과가 없습니다."
             return "검색결과가 없습니다."
         }
+    }
+    
+    func searchResultUsingEnum(_ query: String) -> String {
+        switch query {
+        case "스불재" :
+            return NewWords.스불재.rawValue
+        case "삼귀다" :
+            return NewWords.삼귀다.rawValue
+        default :
+            return "검색결과가 없습니다."
+        }
+        
     }
     
 
